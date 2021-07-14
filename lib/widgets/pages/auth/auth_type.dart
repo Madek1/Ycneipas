@@ -12,7 +12,9 @@ class AuthTypePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TPage(
-      title: 'Auth Type',
+      appBar: AppBar(
+        title: Text('Auth Type'),
+      ),
       body: <Widget>[
         Container(
           padding: const EdgeInsets.all(16),

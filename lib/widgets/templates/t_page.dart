@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
 class TPage extends StatelessWidget {
-  final String title;
   final PreferredSizeWidget? appBar;
   final List<Widget> body;
   final Widget? bottomNavigationBar;
 
   const TPage({
-    required this.title,
     this.appBar,
     required this.body,
     this.bottomNavigationBar,

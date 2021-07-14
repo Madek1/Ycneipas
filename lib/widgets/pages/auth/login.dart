@@ -25,8 +25,7 @@ class _LoginPageState extends State<LoginPage> {
   @TODO('Create form with email and password inputs, sign in button')
   Widget build(BuildContext context) {
     return TPage(
-      title: 'Log in',
-      body: [],
+      body: <Widget>[],
     );
   }
 }
