@@ -13,9 +13,7 @@ class App extends StatelessWidget {
       ),
       home: StoreProvider<AppState>(
         store: Redux.store,
-        child: HomePage(
-          title: 'Ycneipas',
-        ),
+        child: HomePage(),
       ),
     );
   }
