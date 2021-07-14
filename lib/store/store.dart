@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:redux/redux.dart';
+import 'package:redux_thunk/redux_thunk.dart';
 import 'package:untitled/store/redux/user/user_actions.dart';
 import 'package:untitled/store/redux/user/user_reducer.dart';
 import 'package:untitled/store/redux/user/user_state.dart';
@@ -29,6 +30,7 @@ class AppState {
 }
 
 AppState appReducer(AppState state, dynamic action) {
+  print(action);
   if (action is UserStateActions) {
     final UserState newUserState = userReducer(state.userState, action);
     return state.copyWith(
@@ -62,7 +64,9 @@ class Redux {
     final WalletsState initialWalletsState = WalletsState.initial();
     _store = Store<AppState>(
       appReducer,
-      middleware: [],
+      middleware: [
+        thunkMiddleware,
+      ],
       initialState: AppState(
         userState: initialUserState,
         walletsState: initialWalletsState,

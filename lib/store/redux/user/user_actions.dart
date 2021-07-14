@@ -18,17 +18,38 @@ class SetUserStateAction extends UserStateActions {
   SetUserStateAction(UserState userState) : super(userState);
 }
 
-Future<void> logIn(Store<AppState> store) async {
+Future<void> logInAction(Store<AppState> store) async {
   store.dispatch(
     SetUserStateAction(
       UserState(
-        isLogging: false,
-        user: UserModel(
-          uid: 'c7282cf2-e4ce-11eb-ba80-0242ac130004',
-          name: 'Michal',
-          surname: 'Bilski',
-        ),
+        isLogging: true,
+        isError: false,
       ),
     ),
   );
+  try {
+    await Future.delayed(const Duration(seconds: 1), () {
+      store.dispatch(
+        SetUserStateAction(
+          UserState(
+            isLogging: false,
+            user: UserModel(
+              uid: 'c7282cf2-e4ce-11eb-ba80-0242ac130004',
+              name: 'Michal',
+              surname: 'Bilski',
+            ),
+          ),
+        ),
+      );
+    });
+  } catch (error) {
+    store.dispatch(
+      SetUserStateAction(
+        UserState(
+          isLogging: false,
+          isError: true,
+        ),
+      ),
+    );
+  }
 }

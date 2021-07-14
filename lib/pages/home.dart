@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:untitled/store/models/user_model.dart';
+import 'package:untitled/store/redux/user/user_actions.dart';
 import 'package:untitled/store/store.dart';
 
 class HomePage extends StatefulWidget {
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<HomePage> {
   }
 
   void _logIn() {
-    Redux.store.dispatch(logIn);
+    Redux.store.dispatch(logInAction);
   }
 
   @override
@@ -55,7 +56,7 @@ class _MyHomePageState extends State<HomePage> {
                   return Text(user.name!);
                 }
                 return ElevatedButton(
-                  onPressed: () {},
+                  onPressed: _logIn,
                   child: Text('Log in'),
                 );
               },

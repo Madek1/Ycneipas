@@ -10,7 +10,7 @@ class UserState {
   UserState({
     this.isError,
     this.isLogging,
-    required this.user,
+    this.user,
   });
 
   factory UserState.initial() => UserState(

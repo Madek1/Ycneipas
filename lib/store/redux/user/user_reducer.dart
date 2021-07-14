@@ -7,7 +7,7 @@ UserState userReducer(UserState prevState, UserStateActions action) {
     return prevState.copyWith(
       isError: payload.isError,
       isLogging: payload.isLogging,
-      user: payload.user!,
+      user: payload.user,
     );
   }
   return prevState;
