@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_builder.dart';
+import 'package:untitled/routes/router_management.dart';
+import 'package:untitled/routes/routes.dart';
+import 'package:untitled/utils/todo.dart';
 import 'package:untitled/widgets/templates/t_page.dart';
 
+@TODO('Implement controller to check user auth status')
 class AuthTypePage extends StatelessWidget {
   const AuthTypePage();
 
   @override
   Widget build(BuildContext context) {
     return TPage(
+      title: 'Auth Type',
       body: <Widget>[
         Container(
           padding: const EdgeInsets.all(16),
@@ -16,7 +21,7 @@ class AuthTypePage extends StatelessWidget {
             icon: Icons.person_add,
             backgroundColor: Colors.indigo,
             text: 'Registration',
-            onPressed: () => _pushPage(context, RegisterPage()),
+            onPressed: () => RouterManagement.push(context, Routes.authType),
           ),
         ),
         Container(
@@ -26,7 +31,7 @@ class AuthTypePage extends StatelessWidget {
             icon: Icons.verified_user,
             backgroundColor: Colors.orange,
             text: 'Sign In',
-            onPressed: () => _pushPage(context, SignInPage()),
+            onPressed: () => RouterManagement.push(context, Routes.authType),
           ),
         ),
       ],
