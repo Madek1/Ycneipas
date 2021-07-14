@@ -36,7 +36,7 @@ class _MyHomePageState extends State<HomePage> {
   }
 
   void _logIn() {
-    Redux.store.dispatch(logInUserAction)
+    Redux.store.dispatch(logIn);
   }
 
   @override

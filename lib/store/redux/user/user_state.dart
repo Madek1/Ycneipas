@@ -3,13 +3,13 @@ import 'package:untitled/store/models/user_model.dart';
 
 @immutable
 class UserState {
-  final bool isError;
-  final bool isLogging;
+  final bool? isError;
+  final bool? isLogging;
   final UserModel? user;
 
   UserState({
-    required this.isError,
-    required this.isLogging,
+    this.isError,
+    this.isLogging,
     required this.user,
   });
 
