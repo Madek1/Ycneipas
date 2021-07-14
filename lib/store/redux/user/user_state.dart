@@ -20,9 +20,9 @@ class UserState {
       );
 
   UserState copyWith({
-    required bool isError,
-    required bool isLogging,
-    required UserModel user,
+    bool? isError,
+    bool? isLogging,
+    UserModel? user,
   }) {
     return UserState(
       isError: isError ?? this.isError,
