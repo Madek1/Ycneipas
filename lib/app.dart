@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:untitled/pages/home.dart';
 import 'package:untitled/store/store.dart';
+import 'package:untitled/widgets/pages/home.dart';
 
 class App extends StatelessWidget {
   @override
