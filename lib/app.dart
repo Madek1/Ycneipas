@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:untitled/config/themes/app_theme.dart';
 import 'package:untitled/store/store.dart';
 import 'package:untitled/widgets/pages/home.dart';
 
@@ -8,9 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Ycneipas',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-      ),
+      theme: AppTheme.themeData,
       home: StoreProvider<AppState>(
         store: Redux.store,
         child: HomePage(),
