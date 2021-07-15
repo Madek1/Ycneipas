@@ -52,6 +52,14 @@ class RouterManagement {
     );
   }
 
+  static void pushReplacement(BuildContext context, Routes route) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute<void>(
+        builder: (_) => _getRouteWidget(route),
+      ),
+    );
+  }
+
   static void pop(BuildContext context) {
     if (Navigator.of(context).canPop()) {
       Navigator.of(context).pop();

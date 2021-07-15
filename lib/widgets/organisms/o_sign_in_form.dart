@@ -44,7 +44,7 @@ class _OSignInFormState extends State<OSignInForm> {
           ),
         ),
       );
-      RouterManagement.push(context, Routes.home);
+      RouterManagement.pushReplacement(context, Routes.home);
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(

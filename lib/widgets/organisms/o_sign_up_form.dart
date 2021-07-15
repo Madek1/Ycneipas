@@ -43,7 +43,7 @@ class _OSignUpFormState extends State<OSignUpForm> {
           ),
         ),
       );
-      RouterManagement.push(context, Routes.home);
+      RouterManagement.pushReplacement(context, Routes.home);
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
