@@ -8,14 +8,14 @@ import 'package:untitled/store/store.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
-class OSignInForm extends StatefulWidget {
-  const OSignInForm();
+class OSignUpForm extends StatefulWidget {
+  const OSignUpForm();
 
   @override
-  _OSignInFormState createState() => _OSignInFormState();
+  _OSignUpFormState createState() => _OSignUpFormState();
 }
 
-class _OSignInFormState extends State<OSignInForm> {
+class _OSignUpFormState extends State<OSignUpForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();

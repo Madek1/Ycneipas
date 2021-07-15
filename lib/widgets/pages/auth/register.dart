@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/utils/todo.dart';
-import 'package:untitled/widgets/organisms/o_sign_in_form.dart';
+import 'package:untitled/widgets/organisms/o_sign_up_form.dart';
 import 'package:untitled/widgets/templates/t_page.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -27,10 +27,10 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return TPage(
       appBar: AppBar(
-        title: Text('Sign in'),
+        title: Text('Sign up'),
       ),
       body: <Widget>[
-        OSignInForm(),
+        OSignUpForm(),
       ],
     );
   }
