@@ -14,6 +14,7 @@ class RouterManagement {
     return Redux.store.state.userState.user != null;
   }
 
+  @TODO('Refacto checking auth status')
   static Widget _getRouteWidget(Routes route) {
     switch (route) {
       case Routes.home:
