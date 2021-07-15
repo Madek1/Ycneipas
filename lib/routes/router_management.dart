@@ -12,10 +12,13 @@ class RouterManagement {
   @TODO('Move to other file')
   static bool get isUserSingedIn {
     try {
-      return Redux.store.state.userState.user!.firebaseDetails != null;
+      if (Redux.store.state.userState.user != null) {
+        return Redux.store.state.userState.user!.firebaseDetails != null;
+      }
     } catch (err) {
       return false;
     }
+    return false;
   }
 
   @TODO('Refacto checking auth status')
