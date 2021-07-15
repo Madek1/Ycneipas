@@ -23,7 +23,7 @@ class AuthTypePage extends StatelessWidget {
             icon: Icons.person_add,
             backgroundColor: Colors.indigo,
             text: 'Registration',
-            onPressed: () => RouterManagement.push(context, Routes.authType),
+            onPressed: () => RouterManagement.push(context, Routes.register),
           ),
         ),
         Container(
@@ -33,7 +33,7 @@ class AuthTypePage extends StatelessWidget {
             icon: Icons.verified_user,
             backgroundColor: Colors.orange,
             text: 'Sign In',
-            onPressed: () => RouterManagement.push(context, Routes.authType),
+            onPressed: () => RouterManagement.push(context, Routes.login),
           ),
         ),
       ],
