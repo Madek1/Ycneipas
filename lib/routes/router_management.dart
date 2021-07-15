@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled/routes/routes.dart';
 import 'package:untitled/widgets/pages/auth/auth_type.dart';
 import 'package:untitled/widgets/pages/auth/login.dart';
+import 'package:untitled/widgets/pages/auth/register.dart';
 import 'package:untitled/widgets/pages/home.dart';
 
 @immutable
@@ -13,7 +14,7 @@ class RouterManagement {
       case Routes.login:
         return LoginPage();
       case Routes.register:
-        //TODO: return register page
+        return RegisterPage();
         break;
     }
     return HomePage();
