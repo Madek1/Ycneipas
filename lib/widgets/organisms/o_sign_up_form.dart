@@ -89,7 +89,7 @@ class _OSignUpFormState extends State<OSignUpForm> {
                 alignment: Alignment.center,
                 child: SignInButton(
                   Buttons.Email,
-                  text: 'Sign In',
+                  text: 'Sign Up',
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
                       await _register();
