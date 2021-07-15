@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:untitled/store/models/user_model.dart';
-import 'package:untitled/store/redux/user/user_actions.dart';
 import 'package:untitled/store/store.dart';
 import 'package:untitled/widgets/templates/t_page.dart';
 
@@ -13,9 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<HomePage> {
-  void _logIn() {
-    Redux.store.dispatch(logInAction);
-  }
+  void _logIn() {}
 
   @override
   Widget build(BuildContext context) {
