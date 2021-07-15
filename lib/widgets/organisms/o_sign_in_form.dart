@@ -1,6 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:untitled/routes/router_management.dart';
+import 'package:untitled/routes/routes.dart';
+import 'package:untitled/store/models/user_model.dart';
+import 'package:untitled/store/redux/user/user_actions.dart';
+import 'package:untitled/store/redux/user/user_state.dart';
+import 'package:untitled/store/store.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -29,6 +35,16 @@ class _OSignInFormState extends State<OSignInForm> {
           content: Text('${user!.email} signed in'),
         ),
       );
+      Redux.store.dispatch(
+        SetUserStateAction(
+          UserState(
+            user: UserModel(
+              firebaseDetails: user,
+            ),
+          ),
+        ),
+      );
+      RouterManagement.push(context, Routes.home);
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
