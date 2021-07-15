@@ -12,8 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<HomePage> {
-  void _logIn() {}
-
   @override
   Widget build(BuildContext context) {
     return TPage(
@@ -23,13 +21,7 @@ class _MyHomePageState extends State<HomePage> {
       body: <Widget>[
         StoreConnector<AppState, UserModel?>(
           builder: (context, user) {
-            if (user != null) {
-              return Text(user.firebaseDetails!.displayName!);
-            }
-            return ElevatedButton(
-              onPressed: _logIn,
-              child: Text('Log in'),
-            );
+            return Text(user!.firebaseDetails!.email!);
           },
           converter: (store) => store.state.userState.user,
         ),

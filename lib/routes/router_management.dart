@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/routes/routes.dart';
+import 'package:untitled/store/store.dart';
 import 'package:untitled/widgets/pages/auth/auth_type.dart';
 import 'package:untitled/widgets/pages/auth/login.dart';
 import 'package:untitled/widgets/pages/auth/register.dart';
@@ -7,19 +8,37 @@ import 'package:untitled/widgets/pages/home.dart';
 
 @immutable
 class RouterManagement {
+  static bool get isUserSingedIn {
+    return Redux.store.state.userState.user != null;
+  }
+
   static Widget _getRouteWidget(Routes route) {
     switch (route) {
       case Routes.home:
-        return HomePage();
+        if (isUserSingedIn) {
+          return HomePage();
+        }
+        break;
       case Routes.authType:
-        return AuthTypePage();
+        if (!isUserSingedIn) {
+          return AuthTypePage();
+        }
+        break;
       case Routes.login:
-        return LoginPage();
+        if (!isUserSingedIn) {
+          return LoginPage();
+        }
+        break;
       case Routes.register:
-        return RegisterPage();
+        if (!isUserSingedIn) {
+          return RegisterPage();
+        }
         break;
     }
-    return HomePage();
+    if (isUserSingedIn) {
+      return HomePage();
+    }
+    return AuthTypePage();
   }
 
   static void push(BuildContext context, Routes route) {
