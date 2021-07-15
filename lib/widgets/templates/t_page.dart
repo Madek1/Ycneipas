@@ -4,11 +4,13 @@ class TPage extends StatelessWidget {
   final PreferredSizeWidget? appBar;
   final List<Widget> body;
   final Widget? bottomNavigationBar;
+  final Widget? floatingActionButton;
 
   const TPage({
     this.appBar,
     required this.body,
     this.bottomNavigationBar,
+    this.floatingActionButton,
   });
 
   @override
@@ -25,6 +27,7 @@ class TPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: bottomNavigationBar,
+      floatingActionButton: floatingActionButton,
     );
   }
 }

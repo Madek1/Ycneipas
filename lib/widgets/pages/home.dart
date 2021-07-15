@@ -29,6 +29,14 @@ class _MyHomePageState extends State<HomePage> {
           'Lorem ipsum',
         ),
       ],
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(
+          Icons.logout,
+          color: Colors.white,
+        ),
+        backgroundColor: Colors.redAccent,
+        onPressed: () {},
+      ),
     );
   }
 }
