@@ -11,7 +11,11 @@ import 'package:untitled/widgets/pages/home.dart';
 class RouterManagement {
   @TODO('Move to other file')
   static bool get isUserSingedIn {
-    return Redux.store.state.userState.user != null;
+    try {
+      return Redux.store.state.userState.user!.firebaseDetails != null;
+    } catch (err) {
+      return false;
+    }
   }
 
   @TODO('Refacto checking auth status')

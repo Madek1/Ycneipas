@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:untitled/mixins/authentication.dart';
 import 'package:untitled/store/models/user_model.dart';
 import 'package:untitled/store/store.dart';
 import 'package:untitled/widgets/templates/t_page.dart';
@@ -11,7 +12,7 @@ class HomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<HomePage> {
+class _MyHomePageState extends State<HomePage> with Authentication {
   @override
   Widget build(BuildContext context) {
     return TPage(
@@ -35,7 +36,9 @@ class _MyHomePageState extends State<HomePage> {
           color: Colors.white,
         ),
         backgroundColor: Colors.redAccent,
-        onPressed: () {},
+        onPressed: () {
+          signOut(context);
+        },
       ),
     );
   }
