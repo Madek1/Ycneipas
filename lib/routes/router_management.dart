@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/routes/routes.dart';
 import 'package:untitled/store/store.dart';
+import 'package:untitled/utils/todo.dart';
 import 'package:untitled/widgets/pages/auth/auth_type.dart';
 import 'package:untitled/widgets/pages/auth/login.dart';
 import 'package:untitled/widgets/pages/auth/register.dart';
@@ -8,6 +9,7 @@ import 'package:untitled/widgets/pages/home.dart';
 
 @immutable
 class RouterManagement {
+  @TODO('Move to other file')
   static bool get isUserSingedIn {
     return Redux.store.state.userState.user != null;
   }
