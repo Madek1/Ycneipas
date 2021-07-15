@@ -50,6 +50,7 @@ class _OSignInFormState extends State<OSignInForm> {
             children: <Widget>[
               TextFormField(
                 controller: _email,
+                keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(labelText: 'Email'),
                 validator: (String? value) {
                   if (value!.isEmpty) {
@@ -68,6 +69,8 @@ class _OSignInFormState extends State<OSignInForm> {
                   return null;
                 },
                 obscureText: true,
+                autocorrect: false,
+                enableSuggestions: false,
               ),
               Container(
                 padding: const EdgeInsets.only(top: 16),
