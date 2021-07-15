@@ -9,6 +9,8 @@ import 'package:untitled/widgets/pages/home.dart';
 class RouterManagement {
   static Widget _getRouteWidget(Routes route) {
     switch (route) {
+      case Routes.home:
+        return HomePage();
       case Routes.authType:
         return AuthTypePage();
       case Routes.login:
