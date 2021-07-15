@@ -27,7 +27,7 @@ class _MyHomePageState extends State<HomePage> {
         StoreConnector<AppState, UserModel?>(
           builder: (context, user) {
             if (user != null) {
-              return Text(user.name!);
+              return Text(user.firebaseDetails!.displayName!);
             }
             return ElevatedButton(
               onPressed: _logIn,

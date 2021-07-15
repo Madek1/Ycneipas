@@ -34,9 +34,7 @@ Future<void> logInAction(Store<AppState> store) async {
           UserState(
             isLogging: false,
             user: UserModel(
-              uid: 'c7282cf2-e4ce-11eb-ba80-0242ac130004',
-              name: 'Michal',
-              surname: 'Bilski',
+              firebaseDetails: null,
             ),
           ),
         ),
