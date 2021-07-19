@@ -1,11 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
+
 class UserModel {
-  final String? uid;
-  final String? name;
-  final String? surname;
+  final User? firebaseDetails;
 
   UserModel({
-    this.uid,
-    this.name,
-    this.surname,
+    this.firebaseDetails,
   });
 }

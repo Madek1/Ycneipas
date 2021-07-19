@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "113579661601",
+    "firebase_url": "https://tipbro.firebaseio.com",
+    "project_id": "tipbro",
+    "storage_bucket": "tipbro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113579661601:android:feafd2c78bc30e99068660",
+        "android_client_info": {
+          "package_name": "com.example.untitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113579661601-st729e3rlamddtockklctnnhd3dife2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6nha9Bql8UqdOCc0gIytl5HiEOrgIPi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113579661601-st729e3rlamddtockklctnnhd3dife2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
