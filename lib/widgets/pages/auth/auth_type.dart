@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_builder.dart';
 import 'package:untitled/routes/router_management.dart';
 import 'package:untitled/routes/routes.dart';
-import 'package:untitled/utils/todo.dart';
 import 'package:untitled/widgets/templates/t_page.dart';
 
-@TODO('Implement controller to check user auth status')
 class AuthTypePage extends StatelessWidget {
   const AuthTypePage();
 
